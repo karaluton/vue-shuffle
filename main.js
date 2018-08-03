@@ -13,6 +13,7 @@ new Vue({
       shuffleSpeed: 'shuffleMedium',
       shuffleTypes: ['Slow', 'Medium', 'Fast'],
       isDeckShuffled: false,
+      shuffleCount: 0,
     },
     created() {
       this.displayInitialDeck();
@@ -35,6 +36,7 @@ new Vue({
         }
 
         this.isDeckShuffled = false;
+        this.shuffleCount = 0;
       },
       shuffleDeck() {
         for(let i = this.cards.length - 1; i > 0; i--) {
@@ -46,6 +48,7 @@ new Vue({
           }
 
           this.isDeckShuffled = true;
+          this.shuffleCount = this.shuffleCount + 1;
       }
     },
 });
