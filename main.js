@@ -10,6 +10,8 @@ new Vue({
         '♦': 'red',
         '♥': 'red',
       },
+      shuffleSpeed: 'shuffleMedium',
+      shuffleTypes: ['Slow', 'Medium', 'Fast'],
     },
     created() {
       this.displayInitialDeck();
@@ -20,7 +22,7 @@ new Vue({
         this.cards = [];
 
         for(let s = 0; s < this.suits.length; s++) {
-            for(let r= 0; r < this.ranks.length; r++) {
+            for(let r = 0; r < this.ranks.length; r++) {
                 let card = {
                     id: id,
                     rank: this.ranks[r],
