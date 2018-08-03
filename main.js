@@ -32,7 +32,7 @@ new Vue({
         }
       },
       shuffleDeck() {
-          for(let i = this.cards.length = 1; i > 0; i--) {
+        for(let i = this.cards.length - 1; i > 0; i--) {
             let randomIndex = Math.floor(Math.random() * i);
 
             let temp = this.cards[i];
